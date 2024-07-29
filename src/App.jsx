@@ -1,7 +1,14 @@
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import Search from "./components/Search";
+import WeatherData from "./components/WeatherData";
 
 export default function App() {
-return (
-  <h1>Weather</h1>
-)
+  const [location, setLocation] = useState("");
+  return (
+    <div>
+      <Search />
+      <WeatherData />
+    </div>
+  );
 }
