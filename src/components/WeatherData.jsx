@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import apiKeys from "../../api-keys";
+import apiKeys from '../../api-keys'
 import exampleData from "../../example-data.json";
 import axios from "axios";
 
@@ -21,14 +21,14 @@ export default function WeatherData({ location, setPage }) {
   }, [location]);
 
   return (
-    <>
-      <section className="button">
+    <section>
+      <div className="button">
         <button onClick={() => setPage("search")}>Go Back</button>
-      </section>
-      {isLoading && <section className="loading">Loading...</section>}
+      </div>
+      {isLoading && <div className="loading">Loading...</div>}
       {!isLoading && (
         <>
-          <section className="current-weather">
+          <div className="current-weather">
             <h2>
               {weather.location?.name}, {weather.location?.country}
             </h2>
@@ -44,8 +44,11 @@ export default function WeatherData({ location, setPage }) {
             <p>UV Index: {weather.current?.uv}</p>
             <p>Humidity: {weather.current?.humidity}</p>
             <p>Wind Speed: {weather.current?.wind_mph}</p>
-          </section>
-          <section className="forecast">
+            <button onClick={() => {
+              setPage("more-details")
+            }}>More Details</button>
+          </div>
+          <div className="forecast">
             <h3>Forecast</h3>
             {weather.forecast?.forecastday.map((current, index) => {
               return (
@@ -61,9 +64,9 @@ export default function WeatherData({ location, setPage }) {
                 </div>
               );
             })}
-          </section>
+          </div>
         </>
       )}
-    </>
+    </section>
   );
 }

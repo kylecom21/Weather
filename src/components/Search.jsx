@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Button, Input } from "@mui/material";
+
 export default function Search({ setLocation, setPage }) {
   const [searchInput, setSearchInput] = useState("");
   function handleSubmit(event) {
@@ -15,8 +17,8 @@ export default function Search({ setLocation, setPage }) {
       <h1 className="title">Weather</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="search-input">Location: </label>
-          <input
+          <label htmlFor="search-input">Location </label>
+          <Input
             type="text"
             id="search-input"
             value={searchInput}
@@ -24,7 +26,7 @@ export default function Search({ setLocation, setPage }) {
             onChange={handleChange}
           />
         </div>
-        <button className="button">Search</button>
+        <Button variant="contained" onClick={handleSubmit}>Search</Button>
       </form>
     </section>
   );
