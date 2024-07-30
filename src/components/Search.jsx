@@ -26,7 +26,9 @@ export default function Search({ setLocation, setPage }) {
             onChange={handleChange}
           />
         </div>
-        <Button variant="contained" onClick={handleSubmit}>Search</Button>
+        <Button variant="contained" onClick={handleSubmit}>
+          Search
+        </Button>
       </form>
     </section>
   );

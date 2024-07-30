@@ -6,43 +6,168 @@
 
 html {
   font-size: 14px;
-  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #333;
+}
+
+#root {
+  display: flex;
+  place-items: center;
+  place-content: center;
+  min-height: 100vh;
+  width: 100%;
 }
 
 section {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  place-items: center;
-  place-content: center;
+  height: fit-content;
+  max-width: 500px;
+  background: #98e8e9;
+  background: linear-gradient(135deg, #98e8e9, #3d71df);
+  color: #2e1f59;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 600px;
+  box-shadow: 1rem 1rem 1rem #00000050;
 }
 
 .search {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  background: #98e8e9;
-  background: linear-gradient(135deg, #98e8e9, #3d71df);
+  place-items: center;
+  place-content: center;
+  padding: 4rem 2rem;
 }
 
 .search h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
+.search label {
+  font-weight: bold;
+}
 
 .search form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .search form div {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
+.weather-data {
+  background: #98e8e9;
+  background: linear-gradient(135deg, #98e8e9, #3d71df);
+  padding: 2rem 2rem 3rem 2rem;
+  gap: 2rem;
+  color: #2e1f59;
+}
 
+.current-weather {
+  background-color: #ffffff50;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.current-weather .location {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+}
 
+.current-weather .location h2 {
+  font-size: 1.3rem;
+}
+
+.current-weather .bigger {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+}
+
+.current-weather img {
+  width: 120px;
+}
+
+.current-weather .temperature {
+  font-size: 4rem;
+}
+
+.current-weather button {
+  margin-top: 1rem;
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.forecast > div {
+  background-color: #2e1f59;
+  color: #eee;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.forecast > div > div {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 0.5rem;
+}
+
+.more-details {
+  padding: 2rem;
+  gap: 3rem;
+}
+
+.location {
+  font-size: 1.3rem;
+}
+
+.location h3 {
+  font-size: 1.8rem;
+  opacity: 0.4;
+}
+
+.more-details .date {
+  font-weight: bold;
+}
+
+.more-details button {
+  width: fit-content;
+}
+
+.more-details > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  place-items: center;
+  background-color: #ffffff60;
+  border-radius: 1rem;
+}
